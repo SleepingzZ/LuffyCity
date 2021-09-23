@@ -1,0 +1,32 @@
+ERROR 2021-09-18 20:17:04,133 log 228 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/Virtualenvs/LuffyBackend/LuffyBackend/apps/userinfo/views.py", line 11, in add
+    logging.info()
+TypeError: info() missing 1 required positional argument: 'msg'
+ERROR 2021-09-18 20:17:04,134 basehttp 154 "GET / HTTP/1.1" 500 66082
+CRITICAL 2021-09-22 19:39:36,186 exception 19 (1146, "Table 'luffycity.luffy_banner' doesn't exist")
+ERROR 2021-09-22 19:39:36,263 log 228 Internal Server Error: /api/v1/home/banner/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2021-09-22 19:39:36,264 basehttp 154 "GET /api/v1/home/banner/ HTTP/1.1" 500 84703
+CRITICAL 2021-09-22 19:40:24,535 exception 19 (1146, "Table 'luffycity.luffy_banner' doesn't exist")
