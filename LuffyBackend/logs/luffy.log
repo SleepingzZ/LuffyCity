@@ -30,3 +30,103 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
 ERROR 2021-09-22 19:39:36,264 basehttp 154 "GET /api/v1/home/banner/ HTTP/1.1" 500 84703
 CRITICAL 2021-09-22 19:40:24,535 exception 19 (1146, "Table 'luffycity.luffy_banner' doesn't exist")
+ERROR 2021-09-28 19:51:54,303 log 228 Internal Server Error: /api/v1/user/login//login/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/apps/userinfo/views.py", line 19, in login
+    if ser.is_valid(raise_exception=True):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/serializers.py", line 228, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'username': [ErrorDetail(string='请确保这个字段至少包含 4 个字符。', code='min_length')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/utils/exception.py", line 17, in exception_handler
+    response = Response({'code': 998, 'msg': response.data['detail']})
+KeyError: 'detail'
+ERROR 2021-09-28 19:51:54,306 basehttp 154 "POST /api/v1/user/login//login/ HTTP/1.1" 500 99473
+ERROR 2021-09-28 19:53:45,927 log 228 Internal Server Error: /api/v1/user/login/login/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/apps/userinfo/views.py", line 19, in login
+    if ser.is_valid(raise_exception=True):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/serializers.py", line 228, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'username': [ErrorDetail(string='请确保这个字段至少包含 4 个字符。', code='min_length')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/utils/exception.py", line 17, in exception_handler
+    response = Response({'code': 998, 'msg': response.data['detail']})
+KeyError: 'detail'
+ERROR 2021-09-28 19:53:45,928 basehttp 154 "POST /api/v1/user/login/login/ HTTP/1.1" 500 99454
+ERROR 2021-09-28 19:54:50,855 log 228 Internal Server Error: /api/v1/user/login/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/apps/userinfo/views.py", line 19, in login
+    if ser.is_valid(raise_exception=True):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/serializers.py", line 228, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'username': [ErrorDetail(string='请确保这个字段至少包含 4 个字符。', code='min_length')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "/Users/creambluea/Virtualenvs/LuffyCity/LuffyBackend/LuffyBackend/utils/exception.py", line 17, in exception_handler
+    response = Response({'code': 998, 'msg': response.data['detail']})
+KeyError: 'detail'
+ERROR 2021-09-28 19:54:50,856 basehttp 154 "POST /api/v1/user/login/ HTTP/1.1" 500 99340
+CRITICAL 2021-09-28 19:56:42,639 exception 24 {'username': [ErrorDetail(string='请确保这个字段至少包含 4 个字符。', code='min_length')]}
+CRITICAL 2021-09-28 19:58:10,691 exception 24 'ValidationError' object has no attribute 'username'
+CRITICAL 2021-09-28 19:58:48,968 exception 24 'ValidationError' object has no attribute 'username'
+CRITICAL 2021-09-28 20:01:30,437 exception 24 'ValidationError' object has no attribute 'username'
+CRITICAL 2021-09-28 20:03:35,190 exception 24 'ValidationError' object has no attribute 'username'
+CRITICAL 2021-09-28 20:10:37,462 exception 24 'ValidationError' object has no attribute 'username'
+CRITICAL 2021-09-28 21:02:13,994 exception 24 手机号不存在
