@@ -1,12 +1,22 @@
-from django.shortcuts import render, HttpResponse
+from utils import log
+from rest_framework.viewsets import ViewSet
+from rest_framework.decorators import action
+from utils import log
+from utils.response import APIResponse
+from .serializer.login_serializer import LoginSerializer
 
 # Create your views here.
 
 
-from utils import log
 logging = log.get_logger()
 
-
-def add(request):
-    logging.info('这是日志')
-    return HttpResponse('ok')
+#
+# class LoginView(ViewSet):
+#     @action(methods='POST', detail=False)
+#     def login(self, request):
+#         ser = LoginSerializer(data=request.data)
+#
+#         if ser.is_valid():
+#             pass
+#         else:
+#             return APIResponse(code=100, msg='Failed')

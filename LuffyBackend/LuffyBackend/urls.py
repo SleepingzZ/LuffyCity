@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/v1/user/', include('userinfo.urls')),
+    path('api/v1/user/', include('userinfo.urls')),
     path('api/v1/home/', include('home.urls')),
 
     # 配置开启 Media

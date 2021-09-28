@@ -23,21 +23,27 @@
 
       <div class="right-part">
         <div>
-          <span>登录</span>
+          <span @click="popLogin">登录</span>
           <span class="line">|</span>
-          <span>注册</span>
+          <span @click="popRegister">注册</span>
         </div>
       </div>
+      <Login v-if="loginInterface" @close="closeLogin" @go="popRegister"></Login>
+      <Register v-if="registerInterface" @close="closeRegister" @go="popLogin" />
     </div>
   </div>
 </template>
 
 <script>
+import Login from "./Login";
+import Register from "./Register";
   export default {
     name: "Header",
     data() {
       return {
         url_path: sessionStorage.url_path || '/',
+        loginInterface: false,
+        registerInterface: false,
       }
     },
     methods: {
@@ -48,6 +54,24 @@
         }
         sessionStorage.url_path = url_path;
       },
+      popLogin() {
+        this.loginInterface = true;
+        this.registerInterface = false;
+      },
+      popRegister() {
+        this.loginInterface = false;
+        this.registerInterface = true;
+      },
+      closeLogin() {
+        this.loginInterface = false;
+      },
+      closeRegister() {
+        this.registerInterface = false;
+      }
+    },
+    components:{
+      Login,
+      Register,
     },
     created() {
       // 前端存储数据： 1、cookies -- 存储有时效；2、sessionStorage -- 临时存储，页面刷新或关闭即失效；3、localStorage -- 永久保存，清除缓存即消失
