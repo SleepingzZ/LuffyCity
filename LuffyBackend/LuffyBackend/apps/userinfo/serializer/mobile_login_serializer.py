@@ -1,5 +1,5 @@
-import re
-
+from django.conf import settings
+from django.core.cache import cache
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
@@ -7,16 +7,17 @@ from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handl
 from userinfo.models import UserInfo
 
 
-class LoginSerializer(serializers.ModelSerializer):
+class MobileLoginSerializer(serializers.ModelSerializer):
     """
     username 由于映射了 UserInfo 的 username, 且 unique=True, 即 username 本身的校验规则会走 unique=True,
     回去数据亏查询是否已经有这个用户, 如果有则直接抛异常, 因此需要重写该字段, 不设规则
     """
-    username = serializers.CharField(max_length=16, min_length=4)
+    mobile = serializers.CharField()  # 重写 mobile 字段, 是由于 unique=True
+    code = serializers.CharField()  # 表中没有 code 字段,因此需要重写
 
     class Meta:
         model = UserInfo
-        fields = ['username', 'password']
+        fields = ['mobile', 'code']
 
     def validate(self, attrs):
         """
@@ -32,20 +33,23 @@ class LoginSerializer(serializers.ModelSerializer):
 
     # 不是隐藏方法, 伪私有方法, 一般只供公司内部使用, 外部也可以调用
     def _get_user(self, attrs):
-        username = attrs.get('username')
-        password = attrs.get('password')
-        # 多方式登录
-        if re.match(r'^1[3-9][0-9]{9}$', username):
-            user = UserInfo.objects.filter(mobile=username).first()
+        mobile = attrs.get('mobile')
+        code = attrs.get('code')
+
+        # 获取缓存中的验证码
+        cache_code = cache.get(settings.CACHE_SMS % mobile)
+
+        # 校验验证码
+        if cache_code and code == cache_code:
+            user = UserInfo.objects.filter(mobile=mobile).first()
+
+            if user:
+                return user
+            else:
+                raise ValidationError('用户名或密码错误')
 
         else:
-            user = UserInfo.objects.filter(username=username).first()
-
-        if user and user.check_password(password):
-            return user
-
-        else:
-            raise ValidationError('用户名或密码错误')
+            raise ValidationError('验证码错误')
 
     def _get_token(self, user):
         payload = jwt_payload_handler(user)

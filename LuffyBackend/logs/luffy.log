@@ -130,3 +130,124 @@ CRITICAL 2021-09-28 20:01:30,437 exception 24 'ValidationError' object has no at
 CRITICAL 2021-09-28 20:03:35,190 exception 24 'ValidationError' object has no attribute 'username'
 CRITICAL 2021-09-28 20:10:37,462 exception 24 'ValidationError' object has no attribute 'username'
 CRITICAL 2021-09-28 21:02:13,994 exception 24 手机号不存在
+CRITICAL 2021-09-28 23:58:52,373 exception 24 match() missing 1 required positional argument: 'string'
+CRITICAL 2021-09-29 00:12:23,486 exception 24 match() missing 1 required positional argument: 'string'
+CRITICAL 2021-09-29 00:15:58,226 exception 24 match() missing 1 required positional argument: 'string'
+CRITICAL 2021-09-29 00:16:44,465 exception 24 match() missing 1 required positional argument: 'string'
+CRITICAL 2021-09-29 00:17:13,664 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 00:18:38,015 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 08:25:32,369 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 08:45:56,917 exception 24 手机号不存在
+CRITICAL 2021-09-29 08:46:47,030 exception 24 {'username': [ErrorDetail(string='该字段是必填项。', code='required')], 'password': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-09-29 08:49:06,391 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 08:49:30,529 exception 24 方法 “POST” 不被允许。
+ERROR 2021-09-29 08:49:37,971 log 228 Internal Server Error: /api/v1/user/send_sms/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.exceptions.APIException'>`
+ERROR 2021-09-29 08:49:37,972 basehttp 154 "GET /api/v1/user/send_sms/ HTTP/1.1" 500 82717
+CRITICAL 2021-09-29 08:50:07,567 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:04:58,970 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:15:36,746 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:16:24,513 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:16:35,297 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:16:36,048 exception 24 请求超过了限速。 Expected available in 60 seconds.
+CRITICAL 2021-09-29 17:17:26,308 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+CRITICAL 2021-09-29 17:17:53,730 exception 24 请求超过了限速。 Expected available in 33 seconds.
+CRITICAL 2021-09-29 17:18:07,456 exception 24 'Settings' object has no attribute 'CACHE_SMS'
+ERROR 2021-09-29 17:26:01,199 log 228 Internal Server Error: /api/v1/user/sms/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.exceptions.APIException'>`
+ERROR 2021-09-29 17:26:01,200 basehttp 154 "GET /api/v1/user/sms/?mobile=18658025230 HTTP/1.1" 500 83396
+ERROR 2021-09-29 18:39:45,060 log 228 Internal Server Error: /api/v1/user/sms/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.exceptions.APIException'>`
+ERROR 2021-09-29 18:41:25,084 log 228 Internal Server Error: /api/v1/user/sms/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.exceptions.APIException'>`
+ERROR 2021-09-29 18:41:25,085 basehttp 154 "GET /api/v1/user/sms/?mobile=18658025230 HTTP/1.1" 500 83396
+CRITICAL 2021-09-29 18:41:48,687 exception 24 短信发送失败
+CRITICAL 2021-09-29 18:42:40,264 exception 24 短信发送失败
+CRITICAL 2021-09-29 19:38:59,662 exception 24 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:39:46,299 exception 24 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:41:55,144 exception 24 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:49:43,700 exception 23 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:51:32,594 exception 23 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:51:58,245 exception 23 'dict' object has no attribute 'code'
+CRITICAL 2021-09-29 19:52:52,587 exception 23 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:57:21,830 exception 23 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 19:58:12,057 exception 23 {'non_field_errors': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 20:51:36,735 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 20:51:57,659 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 20:51:59,259 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 20:52:47,247 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-29 20:53:20,624 exception 23 '111111'
+CRITICAL 2021-09-29 20:54:21,815 exception 23 '111111'
+CRITICAL 2021-09-29 20:55:54,750 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-29 20:56:10,032 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-09-29 20:59:33,327 exception 23 {'username': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-09-29 21:00:59,965 exception 23 {'username': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-09-29 21:01:00,654 exception 23 {'username': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-09-29 21:01:57,924 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-29 21:02:56,775 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-09-29 21:03:08,894 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-29 21:03:50,822 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-29 21:06:18,195 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-09-29 21:08:45,830 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-29 21:09:35,582 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-09-29 21:10:03,752 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}

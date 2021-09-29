@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
 import sys
-
+from .custom_settings import *
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = sys.path.append(BASE_DIR)
@@ -181,7 +181,8 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'userinfo.UserInfo'
 
 REST_FRAMEWORK = {
-    'EXCEPTION_HANDLER': 'utils.exception.exception_handler',
+    'EXCEPTION_HANDLER': 'utils.exception.exception_handler',  # 异常处理
+    'DEFAULT_THROTTLE_RATES': {'sms': '1/m'},  # 短信频率限制
 }
 
 # 开启 Media 路径
@@ -218,4 +219,5 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
     'Pragma',
 )
-BANNER_COUNT = 4
+
+
