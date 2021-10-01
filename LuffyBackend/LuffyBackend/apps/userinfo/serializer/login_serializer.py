@@ -45,7 +45,7 @@ class LoginSerializer(serializers.ModelSerializer):
             return user
 
         else:
-            raise ValidationError('用户名或密码错误')
+            raise ValidationError({'detail': '用户名或密码错误'})
 
     def _get_token(self, user):
         payload = jwt_payload_handler(user)

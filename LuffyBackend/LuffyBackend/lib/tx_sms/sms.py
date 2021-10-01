@@ -1,9 +1,11 @@
 import random
 
 from qcloudsms_py import SmsSingleSender
-from qcloudsms_py.httpclient import HTTPError
 
+from utils.log import get_logger
 from .settings import *
+
+logger = get_logger()
 
 
 def get_code():
@@ -17,11 +19,19 @@ def send_sms(mobile, code):
     params = [code, 5]
     try:
         result = sender.send_with_param(86, mobile, TEMPLATE_ID, params, sign=SMS_SIGN, extend="", ext="")
-        return result
-    except HTTPError as e:
-        print(e)
+
     except Exception as e:
-        print(e)
+        # 记录日志
+        logger.error('%s手机号，发送短信失败，错误信息是%s' % (mobile, str(e)))
+
+    if result['result'] == 0:
+
+        return True
+
+    else:
+
+        logger.warning('%s手机号，发送短信失败,失败原因是%s' % (mobile, result['errmsg']))
+        return False
 
 
 if __name__ == '__main__':

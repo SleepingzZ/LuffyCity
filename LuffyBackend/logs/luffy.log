@@ -251,3 +251,92 @@ CRITICAL 2021-09-29 21:06:18,195 exception 23 {'mobile': [ErrorDetail(string='�
 CRITICAL 2021-09-29 21:08:45,830 exception 23 HTTP status code must be an integer.
 CRITICAL 2021-09-29 21:09:35,582 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
 CRITICAL 2021-09-29 21:10:03,752 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-09-30 00:08:58,219 exception 23 {'non_field_errors': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 00:11:26,843 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 00:12:28,772 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 15:29:57,167 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:33:46,831 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:34:28,359 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:34:41,936 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:36:07,957 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:37:56,672 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:38:03,414 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:57:12,950 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:58:51,521 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:59:19,836 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 15:59:49,648 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:02:20,742 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:04:31,555 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:04:36,796 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:05:06,095 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:06:48,970 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:07:18,852 exception 23 方法 “GET” 不被允许。
+CRITICAL 2021-09-30 16:08:35,034 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:08:51,366 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:09:20,418 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:12:19,113 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:12:21,884 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:13:15,815 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:14:11,963 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:15:41,238 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:17:53,378 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:18:54,358 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:19:15,360 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:23:52,930 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:24:46,558 exception 23 手机号不存在
+CRITICAL 2021-09-30 16:48:09,956 exception 23 name 'APPID' is not defined
+CRITICAL 2021-09-30 16:53:33,540 exception 23 name 'APPID' is not defined
+CRITICAL 2021-09-30 17:07:45,661 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 17:16:25,259 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 17:16:33,785 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 17:18:57,253 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 19:03:39,297 exception 23 set() got an unexpected keyword argument 'code'
+CRITICAL 2021-09-30 19:06:16,317 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 19:06:16,515 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 19:06:16,611 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 19:06:35,402 exception 23 set() got an unexpected keyword argument 'cache_code'
+CRITICAL 2021-09-30 19:18:15,635 exception 23 'APIResponse' object has no attribute 'username'
+CRITICAL 2021-09-30 19:19:07,179 exception 23 type object argument after ** must be a mapping, not UserInfo
+CRITICAL 2021-09-30 19:19:33,666 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-30 19:19:57,325 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-30 19:20:02,813 exception 23 type object argument after ** must be a mapping, not str
+CRITICAL 2021-09-30 19:20:22,432 exception 23 'APIResponse' object has no attribute 'username'
+CRITICAL 2021-09-30 19:23:25,094 exception 23 'APIResponse' object has no attribute 'username'
+CRITICAL 2021-09-30 19:48:00,993 exception 23 HTTP status code must be an integer.
+CRITICAL 2021-09-30 19:50:49,286 exception 23 'UserInfo' object has no attribute 'msg'
+CRITICAL 2021-09-30 19:52:28,352 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 19:53:44,211 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 20:01:17,084 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-09-30 20:14:36,032 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 20:16:19,925 exception 23 {'detail': [ErrorDetail(string='用户名或密码错误', code='invalid')]}
+CRITICAL 2021-09-30 20:24:56,125 exception 23 请求超过了限速。 Expected available in 16 seconds.
+CRITICAL 2021-09-30 20:25:09,543 exception 23 请求超过了限速。 Expected available in 3 seconds.
+CRITICAL 2021-09-30 20:26:45,935 exception 23 请求超过了限速。 Expected available in 16 seconds.
+CRITICAL 2021-09-30 20:27:17,499 exception 23 请求超过了限速。 Expected available in 47 seconds.
+CRITICAL 2021-09-30 20:53:50,275 exception 23 短信发送失败
+CRITICAL 2021-10-01 14:21:04,871 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-01 14:21:22,099 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-01 14:32:31,098 exception 23 短信发送失败
+CRITICAL 2021-10-01 14:36:38,906 exception 23 短信发送失败
+CRITICAL 2021-10-01 14:38:22,967 exception 23 短信发送失败
+CRITICAL 2021-10-01 15:15:10,824 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:15:20,789 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:18:06,721 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:29:35,221 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:30:11,834 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:32:27,664 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:42:03,036 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:44:19,702 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:44:22,540 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:45:04,059 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:45:10,908 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:45:59,473 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:46:04,052 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:53:08,033 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:53:13,172 exception 23 手机号不存在
+CRITICAL 2021-10-01 15:53:17,787 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:54:44,696 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:57:33,192 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:57:33,412 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:58:02,513 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-01 15:58:02,634 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}

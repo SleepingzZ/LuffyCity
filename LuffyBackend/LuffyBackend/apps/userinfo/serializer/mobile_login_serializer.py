@@ -3,7 +3,7 @@ from django.core.cache import cache
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
-
+from utils.response import APIResponse
 from userinfo.models import UserInfo
 
 
@@ -41,15 +41,17 @@ class MobileLoginSerializer(serializers.ModelSerializer):
 
         # 校验验证码
         if cache_code and code == cache_code:
+            # 校验结束, 验证码置为空
+            cache.set(settings.CACHE_SMS % mobile, '')
             user = UserInfo.objects.filter(mobile=mobile).first()
 
             if user:
                 return user
             else:
-                raise ValidationError('用户名或密码错误')
+                raise ValidationError({'detail': '用户名或密码错误'})
 
         else:
-            raise ValidationError('验证码错误')
+            raise ValidationError({'detail': '验证码错误'})
 
     def _get_token(self, user):
         payload = jwt_payload_handler(user)

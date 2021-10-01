@@ -21,6 +21,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         mobile = attrs.get('mobile')
         code = attrs.get('code')
+        print(code, mobile)
 
         cache_code = cache.get(settings.CACHE_SMS % mobile)
         if (cache_code and code == cache_code) or code == '111111':
@@ -29,7 +30,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             attrs['username'] = mobile
             return attrs
         else:
-            raise ValidationError('验证码错误')
+            raise ValidationError({'detail': '验证码错误'})
 
     # 由于密码未加密, 因此需要重写 create 方法
     def create(self, validated_data):

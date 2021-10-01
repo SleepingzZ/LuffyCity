@@ -7,7 +7,7 @@ from rest_framework.exceptions import APIException
 from rest_framework.viewsets import ViewSet, GenericViewSet
 from rest_framework.mixins import CreateModelMixin
 
-from lib.tx_sms import tx_sms
+from lib.tx_sms import sms
 from utils import log
 from utils.response import APIResponse
 from utils.throttle import SMSThrottle
@@ -49,14 +49,12 @@ class LoginView(ViewSet):
         mobile = request.query_params.get('mobile')
 
         if mobile and re.match(r'^1[3-9][0-9]{9}$', mobile):
-            code = tx_sms.get_code()
-
+            code = sms.get_code()
             # 将验证码存入缓存
             cache.set(settings.CACHE_SMS % mobile, code)
-
-            res = tx_sms.send_sms(mobile, code)
+            res = sms.send_sms(mobile, code)
             if res:
-                return APIResponse(mobile=mobile, code=code)
+                return APIResponse(mobile=mobile, sms=code)  # code 为响应状态码, 使用 code 变量传递验证码会与响应状态码冲突
             else:
                 raise APIException('短信发送失败')
         else:
@@ -66,7 +64,7 @@ class LoginView(ViewSet):
 class CheckMobileView(ViewSet):
     @action(methods=['POST'], detail=False)
     def mobile(self, request):
-        mobile = request.POST.get('mobile')
+        mobile = request.data.get('mobile')
         try:
             UserInfo.objects.get(mobile=mobile)
 
