@@ -10,7 +10,8 @@ import '@/assets/css/global.css'
 // 全局配置
 import settings from "@/assets/js/settings";
 
-Vue.prototype.$url = settings;  // Vue.prototype --> JS 对象原型，相当于类
+Vue.prototype.$setting = settings;  // Vue.prototype --> JS 对象原型，相当于类
+Vue.prototype.$url = settings.base_url
 
 // axios 的全局配置
 Vue.prototype.$axios = axios;

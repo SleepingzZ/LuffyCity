@@ -22,10 +22,15 @@
       </ul>
 
       <div class="right-part">
-        <div>
+        <div v-if="!token">
           <span @click="popLogin">登录</span>
           <span class="line">|</span>
           <span @click="popRegister">注册</span>
+        </div>
+        <div v-else>
+          <span>{{username}}</span>
+          <span class="line">|</span>
+          <span @click="logout">注销</span>
         </div>
       </div>
       <Login v-if="loginInterface" @close="closeLogin" @go="popRegister"></Login>
@@ -44,6 +49,8 @@ import Register from "./Register";
         url_path: sessionStorage.url_path || '/',
         loginInterface: false,
         registerInterface: false,
+        token: '',
+        username: '',
       }
     },
     methods: {
@@ -64,9 +71,32 @@ import Register from "./Register";
       },
       closeLogin() {
         this.loginInterface = false;
+        this.token = this.$cookies.get('token')
+        this.username = this.$cookies.get('username')
       },
       closeRegister() {
         this.registerInterface = false;
+      },
+      logout(){
+        this.$confirm('Whether to log out the current user?', 'Attention', {
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'No',
+          type: 'warning'
+        }).then(() => {
+          this.$cookies.remove('token')
+          this.$cookies.remove('username')
+          this.token = ''
+          this.username = ''
+          this.$message({
+            type: 'success',
+            message: 'Success'
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'Cancel'
+          });
+        });
       }
     },
     components:{
@@ -77,6 +107,8 @@ import Register from "./Register";
       // 前端存储数据： 1、cookies -- 存储有时效；2、sessionStorage -- 临时存储，页面刷新或关闭即失效；3、localStorage -- 永久保存，清除缓存即消失
       sessionStorage.url_path = this.$route.path;
       this.url_path = this.$route.path;
+      this.token = this.$cookies.get('token')
+      this.username = this.$cookies.get('username');
     }
   }
 </script>

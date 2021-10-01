@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <el-carousel height="400px">
-      <el-carousel-item v-for="item in banner_list" :key="item">
+      <el-carousel-item v-for="(item, index) in banner_list" :key="index">
         <div v-if="item.link.startsWith('http')">
           <a :href="item.link"><img :src="item.image" :alt="item.title"></a>
         </div>
@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    this.$axios.get(this.$url.base_url + 'home/banner/').then(res => {
+    this.$axios.get(this.$url + 'home/banner/').then(res => {
       this.banner_list = res.data
       console.log(this.banner_list)
     })

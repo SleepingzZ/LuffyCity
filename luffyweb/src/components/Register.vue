@@ -30,7 +30,7 @@
               <span class="sms" @click="send_sms">{{ sms_interval }}</span>
             </template>
           </el-input>
-          <el-button type="primary">注册</el-button>
+          <el-button type="primary" @click="register">注册</el-button>
         </el-form>
         <div class="foot">
           <span @click="goLogin">立即登录</span>
@@ -72,7 +72,29 @@ export default {
         });
         return false;
       }
-      this.is_send = true;
+      this.$axios.post(this.$url + 'user/mobile/', {'mobile': this.mobile}).then(res => {
+            if (res.data.code === 200) {
+              this.$message({
+                message: '该手机号已注册',
+                type: 'warning',
+                duration: 1000,
+                onClose: () => {
+                  this.mobile = ''
+                  this.is_send = false  // 通过 is_send 来标志, 能否发送验证码
+                }
+              })
+            } else {
+              this.$message({
+                message: '该手机号未注册',
+                type: 'success',
+                duration: 1000,
+                onClose: () => {
+                  this.is_send = true
+                }
+              });
+            }
+          }
+      )
     },
     send_sms() {
       if (!this.is_send) return;
@@ -89,6 +111,45 @@ export default {
           this.sms_interval = `${sms_interval_time}秒后再发`;
         }
       }, 1000);
+      this.$axios.get(this.$url + 'user/sms/?mobile=' + this.mobile).then(res => {
+        if (res.data.code === 200) {
+          this.$message({
+            message: res.data.msg,
+            type: 'success'
+          });
+        } else {
+          this.$message({
+            message: res.data.msg,
+            type: 'error'
+          });
+        }
+      })
+    },
+    register() {
+      if (this.mobile && this.password) {
+        this.$axios.post(this.$url + 'user/register/', {
+          username: this.mobile,
+          password: this.password,
+          sms: this.code
+        }).then(res => {
+              if (res.data.code === 200) {
+                // 关闭登录窗口
+                this.$emit('close')
+                this.$message({
+                  message: res.data.msg,
+                  type: 'success',
+                  duration: 1000,
+                })
+              }else{
+                this.$message({
+                  message: res.data.msg,
+                  type: 'error',
+                  duration: 1000,
+                })
+              }
+            }
+        )
+      }
     }
   }
 }

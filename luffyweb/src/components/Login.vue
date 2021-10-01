@@ -23,7 +23,7 @@
               clearable
               show-password>
           </el-input>
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary" @click="login">登录</el-button>
         </el-form>
         <el-form v-if="login_method === 'is_sms'">
           <el-input
@@ -42,7 +42,7 @@
               <span class="sms" @click="send_sms">{{ sms_interval }}</span>
             </template>
           </el-input>
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary" @click="smsLogin">登录</el-button>
         </el-form>
         <div class="foot">
           <span @click="goRegister">立即注册</span>
@@ -53,6 +53,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Login",
   data() {
@@ -89,10 +90,31 @@ export default {
         });
         return false;
       }
-      this.is_send = true;
+      this.$axios.post(this.$url + 'user/mobile/', {'mobile': this.mobile}).then(res => {
+            if (res.data.code === 200) {
+              this.$message({
+                message: '请获取验证码',
+                type: 'success',
+                duration: 1000,
+                onClose: () => {
+                  this.is_send = true  // 通过 is_send 来标志, 能否发送验证码
+                }
+              })
+            } else {
+              this.$message({
+                message: '该手机号未注册, 请先注册',
+                type: 'error',
+                duration: 1000,
+                onClose: () => {
+                  this.mobile = ''
+                  this.is_send = false
+                }
+              });
+            }
+          }
+      )
     },
     send_sms() {
-
       if (!this.is_send) return;
       this.is_send = false;
       let sms_interval_time = 60;
@@ -107,7 +129,83 @@ export default {
           this.sms_interval = `${sms_interval_time}秒后再发`;
         }
       }, 1000);
+      this.$axios.get(this.$url + 'user/sms/?mobile=' + this.mobile).then(res => {
+        if (res.data.code === 200) {
+          this.$message({
+            message: res.data.msg,
+            type: 'success',
+          });
+        } else {
+          this.$message({
+            message: res.data.msg,
+            type: 'error',
+          });
+        }
+      })
     }
+    ,  // 密码登录
+    login() {
+      if (this.username && this.password) {
+        this.$axios.post(this.$url + 'user/login/', {
+          username: this.username,
+          password: this.password
+        }).then(res => {
+          if (res.data.code === 200) {
+            // 登录成功, 将 token 和 username 存入 cookies
+            this.$cookies.set('token', res.data.token, '7d')
+            this.$cookies.set('username', res.data.username, '7d')
+            // 关闭登录窗口
+            this.$message({
+              message: res.data.msg,
+              type: 'success',
+              duration: 1000,
+            });
+            this.$emit('close')
+          } else {
+            this.$message({
+              message: res.data.msg[0],
+              type: 'error',
+              duration: 1000,
+            });
+          }
+        })
+      } else {
+        this.$message({
+          message: '请输入用户名或密码',
+          type: 'error',
+          duration: 1000,
+        });
+      }
+    }
+    ,  // 验证码登录
+    smsLogin() {
+      if (this.mobile && this.sms) {
+        this.$axios.post(this.$url + 'user/mlogin/', {
+          mobile: this.mobile,
+          code: this.sms
+        }).then(res => {
+          if (res.data.code === 200) {
+            // 登录成功, 将 token 和 username 存入 cookies
+            this.$cookies.set('token', res.data.token, '7d')
+            this.$cookies.set('username', res.data.username, '7d')
+            this.$message({
+              message: '登录成功',
+              type: 'success',
+              duration: 1000,
+            });
+            // 关闭登录窗口
+            this.$emit('close')
+          } else {
+            this.$message({
+              message: res.data.msg[0],
+              type: 'error',
+              duration: 1000,
+            });
+          }
+        })
+      }
+    }
+    ,
   }
 }
 </script>
