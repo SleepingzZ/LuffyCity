@@ -3,8 +3,7 @@ from django.core.cache import cache
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
-from utils.response import APIResponse
-from userinfo.models import UserInfo
+from ..models import UserInfo
 
 
 class MobileLoginSerializer(serializers.ModelSerializer):

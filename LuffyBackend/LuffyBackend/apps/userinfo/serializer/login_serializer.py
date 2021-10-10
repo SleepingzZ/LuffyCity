@@ -4,7 +4,7 @@ from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
 
-from userinfo.models import UserInfo
+from ..models import UserInfo
 
 
 class LoginSerializer(serializers.ModelSerializer):

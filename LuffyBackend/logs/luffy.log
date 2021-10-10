@@ -340,3 +340,124 @@ CRITICAL 2021-10-01 15:57:33,192 exception 23 {'code': [ErrorDetail(string='该�
 CRITICAL 2021-10-01 15:57:33,412 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
 CRITICAL 2021-10-01 15:58:02,513 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
 CRITICAL 2021-10-01 15:58:02,634 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:43:12,658 exception 23 手机号不存在
+ERROR 2021-10-02 08:43:16,341 sms 25 18958546318手机号，发送短信失败，错误信息是[Errno 8] nodename nor servname provided, or not known
+CRITICAL 2021-10-02 08:43:16,344 exception 23 local variable 'result' referenced before assignment
+CRITICAL 2021-10-02 08:45:22,824 exception 23 手机号不存在
+CRITICAL 2021-10-02 08:45:57,103 exception 23 手机号不存在
+CRITICAL 2021-10-02 08:46:12,965 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:47:19,451 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:48:24,999 exception 23 'dict' object has no attribute 'code'
+CRITICAL 2021-10-02 08:48:43,730 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:52:24,472 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:53:34,500 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 08:54:42,936 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:00:53,872 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-10-02 09:03:41,824 exception 23 {'sms': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:04:35,836 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:05:36,451 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-02 09:06:00,494 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-02 09:06:01,305 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-02 09:12:18,464 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:12:29,954 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:13:22,414 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-02 09:14:03,786 exception 23 {'code': [ErrorDetail(string='该字段是必填项。', code='required')]}
+CRITICAL 2021-10-04 20:08:48,129 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')], 'code': [ErrorDetail(string='请确保这个字段至少包含 6 个字符。', code='min_length')]}
+CRITICAL 2021-10-04 20:09:01,540 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')], 'code': [ErrorDetail(string='请确保这个字段至少包含 6 个字符。', code='min_length')]}
+CRITICAL 2021-10-04 20:09:30,545 exception 23 {'mobile': [ErrorDetail(string='具有 mobile 的 用户表 已存在。', code='unique')]}
+CRITICAL 2021-10-09 16:58:55,906 exception 23 手机号不存在
+CRITICAL 2021-10-09 16:59:12,373 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-09 17:00:03,562 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:00:51,845 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-09 17:00:53,547 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-09 17:01:26,445 exception 23 {'detail': [ErrorDetail(string='验证码错误', code='invalid')]}
+CRITICAL 2021-10-09 17:04:28,629 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:05:04,666 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:06:15,002 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:08:59,242 exception 23 'builtin_function_or_method' object does not support item assignment
+CRITICAL 2021-10-09 17:09:19,732 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:09:19,893 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:10:28,594 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:10:28,728 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:10:29,493 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:10:43,734 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:10,056 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:10,185 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:10,340 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:41,308 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:42,792 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:42,993 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:43,137 exception 23 The given username must be set
+CRITICAL 2021-10-09 17:12:43,369 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:27:47,279 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:32:58,724 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:32:58,809 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:37:27,390 exception 23 setattr expected 3 arguments, got 0
+CRITICAL 2021-10-09 18:37:56,277 exception 23 setattr expected 3 arguments, got 0
+CRITICAL 2021-10-09 18:38:00,419 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:40:10,416 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:40:15,763 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:40:41,832 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:40:46,321 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:42:44,446 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:42:49,602 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:00,088 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:00,270 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:00,648 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:35,429 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:35,595 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:35,761 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:35,972 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:48,270 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:48,399 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:48,520 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:43:48,682 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:44:35,399 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:44:35,570 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:44:36,145 exception 23 The given username must be set
+CRITICAL 2021-10-09 18:45:25,058 exception 23 手机号不存在
+CRITICAL 2021-10-10 16:45:59,347 exception 23 'Teacher' object is not iterable
+CRITICAL 2021-10-10 16:46:03,649 exception 23 'Teacher' object is not iterable
+CRITICAL 2021-10-10 16:46:29,766 exception 23 'Teacher' object is not iterable
+ERROR 2021-10-10 16:46:46,913 log 228 Internal Server Error: /api/v1/course/actual/
+Traceback (most recent call last):
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/renderers.py", line 702, in get_context
+    'filter_form': self.get_filter_form(data, view, request),
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/rest_framework/renderers.py", line 634, in get_filter_form
+    html = backend().to_html(request, queryset, view)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django_filters/rest_framework/backends.py", line 103, in to_html
+    template = loader.get_template(self.template)
+  File "/Users/creambluea/.virtualenvs/Luffy/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: django_filters/rest_framework/form.html
+ERROR 2021-10-10 16:46:46,915 basehttp 154 "GET /api/v1/course/actual/ HTTP/1.1" 500 116505
+CRITICAL 2021-10-10 17:22:14,912 exception 23 无效页面。
+CRITICAL 2021-10-10 17:22:17,487 exception 23 无效页面。
+CRITICAL 2021-10-10 18:06:39,324 exception 23 无效页面。
+CRITICAL 2021-10-10 18:12:49,671 exception 23 无效页面。
+CRITICAL 2021-10-10 18:12:59,120 exception 23 无效页面。
+CRITICAL 2021-10-10 18:13:55,469 exception 23 无效页面。
+CRITICAL 2021-10-10 18:14:29,678 exception 23 无效页面。
+CRITICAL 2021-10-10 18:21:47,904 exception 23 无效页面。
+CRITICAL 2021-10-10 18:21:49,744 exception 23 无效页面。
+CRITICAL 2021-10-10 18:21:51,650 exception 23 无效页面。
+CRITICAL 2021-10-10 18:23:13,497 exception 23 无效页面。
+CRITICAL 2021-10-10 18:23:15,308 exception 23 无效页面。
+CRITICAL 2021-10-10 18:23:19,049 exception 23 无效页面。
+CRITICAL 2021-10-10 18:24:42,704 exception 23 无效页面。
+CRITICAL 2021-10-10 18:24:44,318 exception 23 无效页面。
+CRITICAL 2021-10-10 18:24:45,951 exception 23 无效页面。
+CRITICAL 2021-10-10 18:45:18,090 exception 23 无效页面。
+CRITICAL 2021-10-10 18:48:07,228 exception 23 无效页面。

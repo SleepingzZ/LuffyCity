@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'corsheaders',
     'home',
     'userinfo',
+    'course',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +81,8 @@ WSGI_APPLICATION = 'LuffyBackend.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 # 将敏感信息存入环境变量
-db_user = os.environ.get('DB_USERNAME', 'Luffy')
-db_password = os.environ.get('DB_PASSWORD', 'Luffy123?')
+db_user = os.environ.get('DB_USERNAME_1', 'Luffy')
+db_password = os.environ.get('DB_PASSWORD_1', 'Luffy123?')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

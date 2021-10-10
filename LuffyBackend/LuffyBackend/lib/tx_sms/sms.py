@@ -2,7 +2,7 @@ import random
 
 from qcloudsms_py import SmsSingleSender
 
-from utils.log import get_logger
+from LuffyBackend.utils.log import get_logger
 from .settings import *
 
 logger = get_logger()

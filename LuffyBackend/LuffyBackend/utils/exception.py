@@ -2,7 +2,7 @@ from rest_framework.views import Response
 from rest_framework.views import exception_handler as drf_exception_handler
 
 import logging
-from utils.log import logger
+from .log import logger
 
 logging.getLogger()
 
